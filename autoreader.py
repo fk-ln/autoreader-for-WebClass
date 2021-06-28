@@ -1,0 +1,22 @@
+import time
+from selenium import webdriver
+import config
+driver = webdriver.Chrome()
+driver.get('https://els.sa.dendai.ac.jp/webclass/')
+time.sleep(0.5)
+username = driver.find_element_by_id('username').send_keys(config.username)
+time.sleep(0.5)
+password = driver.find_element_by_id('password').send_keys(config.password)
+time.sleep(0.5)
+login_button = driver.find_element_by_id('LoginBtn').click()
+time.sleep(0.5)
+message_icon = driver.find_element_by_id('notification-dropdown-icon').click()
+time.sleep(0.5)
+driver.switch_to_window(driver.window_handles[-1])
+time.sleep(0.5)
+message_box = driver.find_elements_by_tag_name('a')[1].click()
+time.sleep(0.5)
+autochecker = driver.find_element_by_name('autochecker').click()
+time.sleep(0.5)
+read_button = driver.find_element_by_name('UNSET_UNREADFLAG').click()
+time.sleep(0.5)
