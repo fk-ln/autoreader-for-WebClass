@@ -14,5 +14,5 @@ WebClassのレポート提出したときに受信箱に来る，「レポート
 1. `config.py`に学籍番号と共通パスワードを書いておく。
 1. 同じディレクトリに`autoreader.py`を置いて実行。Chromeが起動して勝手に画面が操作されます。楽しい。
 
-#補足
+## 補足
 ChromeDriverであればWindows,Macともに動作確認済み。`webdriver.Safari`を使えばSafariでも行けるはずだけどうまくいかなかったので諦めた。
